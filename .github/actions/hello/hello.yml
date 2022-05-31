@@ -1,0 +1,19 @@
+name: Hello World
+
+author: Denis Jonathan
+
+description: Learning Github Action
+
+inputs:
+  who-to-greet:
+    description: "Who to greet"
+    required: true
+    default: Denis
+
+outputs:
+  time:
+    description: "The greeting time"
+
+runs:
+  using: "node14"
+  main: "index.js"
