@@ -15,5 +15,5 @@ outputs:
     description: "The greeting time"
 
 runs:
-  using: "node14"
+  using: "node16"
   main: "index.js"
