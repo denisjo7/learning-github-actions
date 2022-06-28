@@ -33,4 +33,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show env value
-        run: echo ${{ env.branch_name }}
+        run: echo "${{ env.branch_name }}"
