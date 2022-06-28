@@ -27,3 +27,9 @@ jobs:
       - name: Show time
         run: |
           echo "Time: ${{ steps.hello.outputs.time }}"
+
+  check-env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show env value
+        run: echo ${{ env.branch_name }}
