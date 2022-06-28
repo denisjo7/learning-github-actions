@@ -7,6 +7,17 @@ jobs:
       - name: Cloning repository
         uses: actions/checkout@v3
 
+      - name: Test conditional
+        run: |
+          if [[ ${{ github.ref_name == stage }} ]]; then
+          echo "branch_name=stage" >> $GITHUB_ENV
+          else
+          echo "branch_name=prod" >> $GITHUB_ENV
+          fi
+
+      - name: Show branch name
+        run: echo "${{ env.branch_name }}"
+
       - name: Say Hello
         id: hello
         uses: ./.github/actions/hello
