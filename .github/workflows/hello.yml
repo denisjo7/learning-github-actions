@@ -9,7 +9,7 @@ jobs:
 
       - name: Test conditional
         run: |
-          if [[ ${{ github.ref_name == stage }} ]]; then
+          if [[ ${{ github.ref_name == "stage" }} ]]; then
           echo "branch_name=stage" >> $GITHUB_ENV
           else
           echo "branch_name=prod" >> $GITHUB_ENV
