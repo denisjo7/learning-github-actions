@@ -33,4 +33,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show env value
+        env:
+          ENV_TYPE: `cat teste.txt`
         run: echo "${{ env.branch_name }}"
