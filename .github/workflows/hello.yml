@@ -38,8 +38,5 @@ jobs:
       - name: Show env value
         run: |
           ENV_TYPE=`cat teste.txt`
-
-          ls -a
-          pwd
           echo "${{ env.branch_name }}"
-          echo "${{ env.ENV_TYPE }}"
+          echo $ENV_TYPE
